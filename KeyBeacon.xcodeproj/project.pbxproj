@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492BDDEB19F9F942006819A4 /* settingsHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492BDDEA19F9F942006819A4 /* settingsHostViewController.m */; };
+		497BDA3819F726D500590EA0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497BDA3719F726D500590EA0 /* CoreData.framework */; };
+		497BDA3A19F726E000590EA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497BDA3919F726E000590EA0 /* Foundation.framework */; };
+		497BDA3C19F7294500590EA0 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 497BDA3B19F7294500590EA0 /* data.plist */; };
+		497BDA4519F739E200590EA0 /* BUOYBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 497BDA4019F739E200590EA0 /* BUOYBeacon.m */; };
+		497BDA4619F739E200590EA0 /* BUOYListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 497BDA4219F739E200590EA0 /* BUOYListener.m */; };
+		497BDA4719F739E200590EA0 /* CLBeacon+Buoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 497BDA4419F739E200590EA0 /* CLBeacon+Buoy.m */; };
+		497BDA4A19F73CAD00590EA0 /* plistHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 497BDA4919F73CAD00590EA0 /* plistHelper.m */; };
+		498B8D7519F45A7C0000FE9D /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B8D7419F45A7C0000FE9D /* settingsViewController.m */; };
+		498B8D7B19F45D6E0000FE9D /* hexKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B8D7A19F45D6E0000FE9D /* hexKeyboard.m */; };
 		498DE7A119F4552B00ADF1E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 498DE7A019F4552B00ADF1E2 /* main.m */; };
 		498DE7A419F4552B00ADF1E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 498DE7A319F4552B00ADF1E2 /* AppDelegate.m */; };
 		498DE7A719F4552B00ADF1E2 /* KeyBeacon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 498DE7A519F4552B00ADF1E2 /* KeyBeacon.xcdatamodeld */; };
@@ -28,6 +38,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492BDDE919F9F942006819A4 /* settingsHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsHostViewController.h; sourceTree = "<group>"; };
+		492BDDEA19F9F942006819A4 /* settingsHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsHostViewController.m; sourceTree = "<group>"; };
+		497BDA3719F726D500590EA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		497BDA3919F726E000590EA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		497BDA3B19F7294500590EA0 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		497BDA3E19F739E200590EA0 /* BUOY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUOY.h; sourceTree = "<group>"; };
+		497BDA3F19F739E200590EA0 /* BUOYBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUOYBeacon.h; sourceTree = "<group>"; };
+		497BDA4019F739E200590EA0 /* BUOYBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUOYBeacon.m; sourceTree = "<group>"; };
+		497BDA4119F739E200590EA0 /* BUOYListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BUOYListener.h; sourceTree = "<group>"; };
+		497BDA4219F739E200590EA0 /* BUOYListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BUOYListener.m; sourceTree = "<group>"; };
+		497BDA4319F739E200590EA0 /* CLBeacon+Buoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+Buoy.h"; sourceTree = "<group>"; };
+		497BDA4419F739E200590EA0 /* CLBeacon+Buoy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+Buoy.m"; sourceTree = "<group>"; };
+		497BDA4819F73CAD00590EA0 /* plistHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plistHelper.h; sourceTree = "<group>"; };
+		497BDA4919F73CAD00590EA0 /* plistHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = plistHelper.m; sourceTree = "<group>"; };
+		498B8D7319F45A7C0000FE9D /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		498B8D7419F45A7C0000FE9D /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		498B8D7919F45D6E0000FE9D /* hexKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hexKeyboard.h; sourceTree = "<group>"; };
+		498B8D7A19F45D6E0000FE9D /* hexKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hexKeyboard.m; sourceTree = "<group>"; };
 		498DE79B19F4552B00ADF1E2 /* KeyBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498DE79F19F4552B00ADF1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498DE7A019F4552B00ADF1E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497BDA3A19F726E000590EA0 /* Foundation.framework in Frameworks */,
+				497BDA3819F726D500590EA0 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +92,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497BDA3D19F739E200590EA0 /* ObjC_beacon */ = {
+			isa = PBXGroup;
+			children = (
+				497BDA3E19F739E200590EA0 /* BUOY.h */,
+				497BDA3F19F739E200590EA0 /* BUOYBeacon.h */,
+				497BDA4019F739E200590EA0 /* BUOYBeacon.m */,
+				497BDA4119F739E200590EA0 /* BUOYListener.h */,
+				497BDA4219F739E200590EA0 /* BUOYListener.m */,
+				497BDA4319F739E200590EA0 /* CLBeacon+Buoy.h */,
+				497BDA4419F739E200590EA0 /* CLBeacon+Buoy.m */,
+			);
+			path = ObjC_beacon;
+			sourceTree = "<group>";
+		};
 		498DE79219F4552B00ADF1E2 = {
 			isa = PBXGroup;
 			children = (
 				498DE79D19F4552B00ADF1E2 /* KeyBeacon */,
 				498DE7BA19F4552B00ADF1E2 /* KeyBeaconTests */,
 				498DE79C19F4552B00ADF1E2 /* Products */,
+				8B3FB5C6271D78251E4E3A20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +128,20 @@
 		498DE79D19F4552B00ADF1E2 /* KeyBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				497BDA3B19F7294500590EA0 /* data.plist */,
 				498DE7A219F4552B00ADF1E2 /* AppDelegate.h */,
 				498DE7A319F4552B00ADF1E2 /* AppDelegate.m */,
 				498DE7A819F4552B00ADF1E2 /* ViewController.h */,
 				498DE7A919F4552B00ADF1E2 /* ViewController.m */,
+				498B8D7319F45A7C0000FE9D /* settingsViewController.h */,
+				498B8D7419F45A7C0000FE9D /* settingsViewController.m */,
+				492BDDE919F9F942006819A4 /* settingsHostViewController.h */,
+				492BDDEA19F9F942006819A4 /* settingsHostViewController.m */,
+				497BDA4819F73CAD00590EA0 /* plistHelper.h */,
+				497BDA4919F73CAD00590EA0 /* plistHelper.m */,
+				498B8D7919F45D6E0000FE9D /* hexKeyboard.h */,
+				498B8D7A19F45D6E0000FE9D /* hexKeyboard.m */,
+				497BDA3D19F739E200590EA0 /* ObjC_beacon */,
 				498DE7AB19F4552B00ADF1E2 /* Main.storyboard */,
 				498DE7AE19F4552B00ADF1E2 /* Images.xcassets */,
 				498DE7B019F4552B00ADF1E2 /* LaunchScreen.xib */,
@@ -120,6 +175,15 @@
 				498DE7BC19F4552B00ADF1E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B3FB5C6271D78251E4E3A20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				497BDA3919F726E000590EA0 /* Foundation.framework */,
+				497BDA3719F726D500590EA0 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +235,12 @@
 				TargetAttributes = {
 					498DE79A19F4552B00ADF1E2 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 2DP9335PZJ;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					498DE7B619F4552B00ADF1E2 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -204,6 +274,7 @@
 			files = (
 				498DE7AD19F4552B00ADF1E2 /* Main.storyboard in Resources */,
 				498DE7B219F4552B00ADF1E2 /* LaunchScreen.xib in Resources */,
+				497BDA3C19F7294500590EA0 /* data.plist in Resources */,
 				498DE7AF19F4552B00ADF1E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,10 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497BDA4A19F73CAD00590EA0 /* plistHelper.m in Sources */,
+				497BDA4519F739E200590EA0 /* BUOYBeacon.m in Sources */,
+				498B8D7519F45A7C0000FE9D /* settingsViewController.m in Sources */,
+				498B8D7B19F45D6E0000FE9D /* hexKeyboard.m in Sources */,
 				498DE7A419F4552B00ADF1E2 /* AppDelegate.m in Sources */,
 				498DE7A719F4552B00ADF1E2 /* KeyBeacon.xcdatamodeld in Sources */,
 				498DE7AA19F4552B00ADF1E2 /* ViewController.m in Sources */,
+				497BDA4619F739E200590EA0 /* BUOYListener.m in Sources */,
 				498DE7A119F4552B00ADF1E2 /* main.m in Sources */,
+				492BDDEB19F9F942006819A4 /* settingsHostViewController.m in Sources */,
+				497BDA4719F739E200590EA0 /* CLBeacon+Buoy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +427,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyBeacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -359,9 +441,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyBeacon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -418,6 +504,7 @@
 				498DE7C319F4552B00ADF1E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		498DE7C419F4552B00ADF1E2 /* Build configuration list for PBXNativeTarget "KeyBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +513,7 @@
 				498DE7C619F4552B00ADF1E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
