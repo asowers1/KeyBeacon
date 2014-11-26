@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		492BDDEB19F9F942006819A4 /* settingsHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492BDDEA19F9F942006819A4 /* settingsHostViewController.m */; };
+		4946AF0C1A02AC6F004B7DE9 /* RootViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4946AF0B1A02AC6F004B7DE9 /* RootViewViewController.m */; };
+		4965F5871A21354900101152 /* beaconController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4965F5861A21354900101152 /* beaconController.m */; };
+		4965F58C1A21A92900101152 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4965F58B1A21A92900101152 /* CoreLocation.framework */; };
+		4965F58E1A21B79300101152 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4965F58D1A21B79300101152 /* CoreGraphics.framework */; };
 		497BDA3819F726D500590EA0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497BDA3719F726D500590EA0 /* CoreData.framework */; };
 		497BDA3A19F726E000590EA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497BDA3919F726E000590EA0 /* Foundation.framework */; };
 		497BDA3C19F7294500590EA0 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 497BDA3B19F7294500590EA0 /* data.plist */; };
@@ -40,6 +44,13 @@
 /* Begin PBXFileReference section */
 		492BDDE919F9F942006819A4 /* settingsHostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsHostViewController.h; sourceTree = "<group>"; };
 		492BDDEA19F9F942006819A4 /* settingsHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsHostViewController.m; sourceTree = "<group>"; };
+		4946AF0A1A02AC6F004B7DE9 /* RootViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewViewController.h; sourceTree = "<group>"; };
+		4946AF0B1A02AC6F004B7DE9 /* RootViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewViewController.m; sourceTree = "<group>"; };
+		4965F5851A21354900101152 /* beaconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beaconController.h; sourceTree = "<group>"; };
+		4965F5861A21354900101152 /* beaconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beaconController.m; sourceTree = "<group>"; };
+		4965F58A1A21A8FD00101152 /* KeyBeacon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KeyBeacon.entitlements; sourceTree = "<group>"; };
+		4965F58B1A21A92900101152 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4965F58D1A21B79300101152 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		497BDA3719F726D500590EA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		497BDA3919F726E000590EA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		497BDA3B19F7294500590EA0 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
@@ -77,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4965F58E1A21B79300101152 /* CoreGraphics.framework in Frameworks */,
+				4965F58C1A21A92900101152 /* CoreLocation.framework in Frameworks */,
 				497BDA3A19F726E000590EA0 /* Foundation.framework in Frameworks */,
 				497BDA3819F726D500590EA0 /* CoreData.framework in Frameworks */,
 			);
@@ -128,9 +141,12 @@
 		498DE79D19F4552B00ADF1E2 /* KeyBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				4965F58A1A21A8FD00101152 /* KeyBeacon.entitlements */,
 				497BDA3B19F7294500590EA0 /* data.plist */,
 				498DE7A219F4552B00ADF1E2 /* AppDelegate.h */,
 				498DE7A319F4552B00ADF1E2 /* AppDelegate.m */,
+				4965F5851A21354900101152 /* beaconController.h */,
+				4965F5861A21354900101152 /* beaconController.m */,
 				498DE7A819F4552B00ADF1E2 /* ViewController.h */,
 				498DE7A919F4552B00ADF1E2 /* ViewController.m */,
 				498B8D7319F45A7C0000FE9D /* settingsViewController.h */,
@@ -141,6 +157,8 @@
 				497BDA4919F73CAD00590EA0 /* plistHelper.m */,
 				498B8D7919F45D6E0000FE9D /* hexKeyboard.h */,
 				498B8D7A19F45D6E0000FE9D /* hexKeyboard.m */,
+				4946AF0A1A02AC6F004B7DE9 /* RootViewViewController.h */,
+				4946AF0B1A02AC6F004B7DE9 /* RootViewViewController.m */,
 				497BDA3D19F739E200590EA0 /* ObjC_beacon */,
 				498DE7AB19F4552B00ADF1E2 /* Main.storyboard */,
 				498DE7AE19F4552B00ADF1E2 /* Images.xcassets */,
@@ -180,6 +198,8 @@
 		8B3FB5C6271D78251E4E3A20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4965F58D1A21B79300101152 /* CoreGraphics.framework */,
+				4965F58B1A21A92900101152 /* CoreLocation.framework */,
 				497BDA3919F726E000590EA0 /* Foundation.framework */,
 				497BDA3719F726D500590EA0 /* CoreData.framework */,
 			);
@@ -240,6 +260,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
 						};
 					};
 					498DE7B619F4552B00ADF1E2 = {
@@ -294,6 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				497BDA4A19F73CAD00590EA0 /* plistHelper.m in Sources */,
+				4965F5871A21354900101152 /* beaconController.m in Sources */,
+				4946AF0C1A02AC6F004B7DE9 /* RootViewViewController.m in Sources */,
 				497BDA4519F739E200590EA0 /* BUOYBeacon.m in Sources */,
 				498B8D7519F45A7C0000FE9D /* settingsViewController.m in Sources */,
 				498B8D7B19F45D6E0000FE9D /* hexKeyboard.m in Sources */,
@@ -379,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -415,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -430,6 +455,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -444,6 +470,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KeyBeacon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TfQ-9o-XbQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TfQ-9o-XbQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -16,12 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripeLeft" translatesAutoresizingMaskIntoConstraints="NO" id="FYL-lu-Afg">
+                                <rect key="frame" x="0.0" y="64" width="60" height="536"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hIe-U7-vvC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripeLeft" translatesAutoresizingMaskIntoConstraints="NO" id="nLO-Gl-t3W">
+                                <rect key="frame" x="0.0" y="475" width="128" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyTeal" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-Sv-V40">
+                                <rect key="frame" x="172" y="291" width="256" height="256"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stripe" translatesAutoresizingMaskIntoConstraints="NO" id="qp3-hQ-ceL">
+                                <rect key="frame" x="547" y="472" width="53" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="pyx-VX-Xdc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.94422743060000003" green="0.94422743060000003" blue="0.94422743060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nLO-Gl-t3W" firstAttribute="leading" secondItem="FYL-lu-Afg" secondAttribute="leading" id="6nB-Da-JpH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qp3-hQ-ceL" secondAttribute="trailing" constant="-16" id="Dm7-KQ-2FP"/>
+                            <constraint firstItem="eyv-Sv-V40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RyR-yv-5ea"/>
+                            <constraint firstItem="FYL-lu-Afg" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="biV-Ro-4Y5"/>
+                            <constraint firstItem="qp3-hQ-ceL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="cDN-Dd-rRk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qp3-hQ-ceL" secondAttribute="bottom" id="cTf-hD-lza"/>
+                            <constraint firstItem="nLO-Gl-t3W" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="3" id="gjc-0v-eP3"/>
+                            <constraint firstItem="FYL-lu-Afg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hte-MN-dt0"/>
+                            <constraint firstItem="nLO-Gl-t3W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n55-Ui-6Cm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eyv-Sv-V40" secondAttribute="bottom" constant="53" id="wkp-Xc-WNO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Key Beacon" id="zbO-rS-fcA">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="y2K-Qi-IiS"/>
-                        <barButtonItem key="rightBarButtonItem" title="Setup" id="zKF-0Z-2eq">
-                            <color key="tintColor" red="0.066666666669999999" green="0.52156862749999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="backBarButtonItem" title="X" id="y2K-Qi-IiS"/>
+                        <barButtonItem key="rightBarButtonItem" image="cog" id="zKF-0Z-2eq">
+                            <color key="tintColor" red="0.83529411764705885" green="0.91764705882352937" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="RPB-Jd-Yhg" kind="show" identifier="setup" id="xUT-GJ-rXK"/>
                             </connections>
@@ -33,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1252" y="389"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root View View Controller-->
         <scene sceneID="VZ1-NH-slM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TfQ-9o-XbQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TfQ-9o-XbQ" customClass="RootViewViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9cB-xT-wNM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -75,7 +107,7 @@
                                     <segment title="Near"/>
                                     <segment title="Far"/>
                                 </segments>
-                                <color key="tintColor" red="0.066666666669999999" green="0.52156862749999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.25490196078431371" green="0.6588235294117647" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4K-eK-TCD">
                                 <rect key="frame" x="16" y="558" width="22" height="22"/>
@@ -88,21 +120,24 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeySettings" translatesAutoresizingMaskIntoConstraints="NO" id="zMo-h6-ZpP">
-                                <rect key="frame" x="180" y="340" width="240" height="240"/>
+                                <rect key="frame" x="236" y="452" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="RZ9-Wg-u1W"/>
-                                    <constraint firstAttribute="width" constant="240" id="lpl-t7-NGt"/>
+                                    <constraint firstAttribute="height" constant="128" id="RZ9-Wg-u1W"/>
+                                    <constraint firstAttribute="width" constant="128" id="lpl-t7-NGt"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94422743055555558" green="0.94422743055555558" blue="0.94422743055555558" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.25490196078431371" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1Fc-IU-8XI" firstAttribute="top" secondItem="r2L-GO-ZGO" secondAttribute="bottom" constant="8" symbolic="YES" id="3kj-Ya-FNU"/>
                             <constraint firstItem="waz-L0-HO1" firstAttribute="top" secondItem="1Fc-IU-8XI" secondAttribute="bottom" constant="8" id="5Ha-u6-Rnq"/>
                             <constraint firstItem="1Fc-IU-8XI" firstAttribute="leading" secondItem="XBY-zh-B2N" secondAttribute="leadingMargin" id="6xZ-gZ-szH"/>
                             <constraint firstItem="waz-L0-HO1" firstAttribute="trailing" secondItem="XBY-zh-B2N" secondAttribute="trailingMargin" id="AMO-0w-nP8"/>
+                            <constraint firstItem="1RS-jh-Xqz" firstAttribute="top" secondItem="zMo-h6-ZpP" secondAttribute="bottom" constant="20" id="HyI-Ke-pHd"/>
                             <constraint firstItem="zMo-h6-ZpP" firstAttribute="centerX" secondItem="waz-L0-HO1" secondAttribute="centerX" id="L0i-AQ-TlP"/>
                             <constraint firstItem="1Fc-IU-8XI" firstAttribute="trailing" secondItem="waz-L0-HO1" secondAttribute="trailing" id="QL0-6F-5sb"/>
+                            <constraint firstAttribute="centerX" secondItem="zMo-h6-ZpP" secondAttribute="centerX" id="Rc8-nS-A5G"/>
                             <constraint firstItem="1Fc-IU-8XI" firstAttribute="leading" secondItem="waz-L0-HO1" secondAttribute="leading" id="XW2-gr-Led"/>
                             <constraint firstItem="F4K-eK-TCD" firstAttribute="leading" secondItem="waz-L0-HO1" secondAttribute="leading" id="Ykr-9e-IcE"/>
                             <constraint firstItem="waz-L0-HO1" firstAttribute="trailing" secondItem="XBY-zh-B2N" secondAttribute="trailingMargin" id="bsV-o0-sOk"/>
@@ -116,8 +151,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="UUID &amp; Range" id="WJ1-xF-caS">
-                        <barButtonItem key="rightBarButtonItem" title="Set" id="yIx-aF-6nt">
-                            <color key="tintColor" red="0.16470588235294117" green="0.52156862745098043" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="check" id="yIx-aF-6nt">
+                            <color key="tintColor" red="0.83529411760000005" green="0.91764705879999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="Set:" destination="Hgd-3v-7mG" id="f5P-u3-H9M"/>
                             </connections>
@@ -130,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15Z-kY-ckF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2759" y="389"/>
+            <point key="canvasLocation" x="2624" y="389"/>
         </scene>
         <!--Settings Host View Controller-->
         <scene sceneID="s3N-6Z-CMi">
@@ -153,5 +188,10 @@
     </scenes>
     <resources>
         <image name="KeySettings" width="256" height="256"/>
+        <image name="KeyTeal" width="256" height="256"/>
+        <image name="check" width="24" height="24"/>
+        <image name="cog" width="24" height="24"/>
+        <image name="stripe" width="128" height="128"/>
+        <image name="stripeLeft" width="128" height="128"/>
     </resources>
 </document>

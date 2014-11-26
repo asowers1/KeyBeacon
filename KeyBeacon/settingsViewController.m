@@ -22,6 +22,10 @@
     self.uuidInputField.inputView = [[hexKeyboard alloc] initWithTextField:self.uuidInputField:self.view.bounds.size.width];
     //self.navigationItem.title = @"Setup iBeacon";
     NSString * selectedUISegmentedControl = [[[plistHelper alloc]init]readFromPlist:@"data.plist" :@"iBeacon_range"];
+    NSUUID   * uuid = [[NSUUID alloc] initWithUUIDString:[[[plistHelper alloc]init]readFromPlist:@"data.plist" :@"iBeacon_uuid"]];
+    if (uuid) {
+        self.uuidInputField.text = uuid.UUIDString;
+    }
     NSLog(@"SelectedUISegmentedControl: %@",selectedUISegmentedControl);
     if ([selectedUISegmentedControl  isEqual: @"Immediate"]) {
         rangePicker.selectedSegmentIndex = 0;
@@ -60,7 +64,8 @@
         NSLog(@"valid UUID");
         [self updateUUIDString:UUIDString];
         [self updateBeaconRange:[rangePicker titleForSegmentAtIndex:rangePicker.selectedSegmentIndex]];
-        [self.navigationController popToRootViewControllerAnimated:true];
+        [self dismissViewControllerAnimated:1 completion:nil];
+        
     }
     else{
         NSLog(@"invalid UUID");
@@ -69,22 +74,22 @@
                                               message:@"Please enter a vaid UUID to proceed"
                                               preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction *cancelAction = [UIAlertAction
-                                       actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
-                                       style:UIAlertActionStyleCancel
-                                       handler:^(UIAlertAction *action)
-                                       {
-                                           NSLog(@"Cancel action");
-                                           [self.uuidInputField resignFirstResponder];
-                                       }];
+        UIAlertAction *cancelAction        = [UIAlertAction
+                                              actionWithTitle:NSLocalizedString(@"Cancel", @"Cancel action")
+                                              style:UIAlertActionStyleCancel
+                                              handler:^(UIAlertAction *action)
+                                              {
+                                                  NSLog(@"Cancel action");
+                                                  [self.uuidInputField resignFirstResponder];
+                                              }];
         
-        UIAlertAction *okAction = [UIAlertAction
-                                   actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                                   style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction *action)
-                                   {
-                                       NSLog(@"OK action");
-                                   }];
+        UIAlertAction *okAction            = [UIAlertAction
+                                              actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                              style:UIAlertActionStyleDefault
+                                              handler:^(UIAlertAction *action)
+                                              {
+                                                  NSLog(@"OK action");
+                                              }];
         
         [alertController addAction:cancelAction];
         [alertController addAction:okAction];
@@ -100,13 +105,13 @@
                                           message:@"\nSetup steps:\n\n1.  Configure your iBeacon®\n2. Input the UUID\n3. Input the Range\n\n\nKeyBeacon was created by Andrew Sowers.\n\niBeacon is a registered trademark of Apple Inc."                                       preferredStyle:UIAlertControllerStyleAlert];
     
     
-    UIAlertAction *okAction = [UIAlertAction
-                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
-                               style:UIAlertActionStyleDefault
-                               handler:^(UIAlertAction *action)
-                               {
-                                   NSLog(@"OK action");
-                               }];
+    UIAlertAction *okAction            = [UIAlertAction
+                                          actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                                          style:UIAlertActionStyleDefault
+                                          handler:^(UIAlertAction *action)
+                                          {
+                                              NSLog(@"OK action");
+                                          }];
     
     [alertController addAction:okAction];
     [self presentViewController:alertController animated:YES completion:nil];

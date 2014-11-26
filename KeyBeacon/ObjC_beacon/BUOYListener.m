@@ -85,6 +85,7 @@ NSTimeInterval const kBUOYDefaultTimeInterval = 0;
         [self.locationManager startMonitoringForRegion:beaconRegion];
         [self.locationManager requestStateForRegion:beaconRegion];
         [self.beaconRegions setObject:beaconRegion forKey:proximityId.UUIDString];
+        NSLog(@"registered");
     }
 }
 
@@ -135,12 +136,15 @@ NSTimeInterval const kBUOYDefaultTimeInterval = 0;
 #pragma mark - Location Manager Delegate
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     // Notify for each Beacon found
+    NSLog(@"did range beacon");
     for (NSInteger b = 0; b < beacons.count; b++) {
+        NSLog(@"send not");
         [self sendNotificationWithBeacon:beacons[b]];
     }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region {
+    NSLog(@"state");
     if ([region isKindOfClass:[CLBeaconRegion class]] && state == CLRegionStateInside) {
         [self.locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
     }
@@ -152,12 +156,13 @@ NSTimeInterval const kBUOYDefaultTimeInterval = 0;
     }
 }
 
-/*
+
  - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
- if ([region isKindOfClass:[CLBeaconRegion class]]) {
- [self.locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
+     if ([region isKindOfClass:[CLBeaconRegion class]]) {
+         NSLog(@"did start monitor");
+         [self.locationManager startRangingBeaconsInRegion:(CLBeaconRegion *)region];
+     }
  }
- }
- */
+
 
 @end
